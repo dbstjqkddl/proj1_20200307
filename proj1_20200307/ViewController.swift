@@ -40,6 +40,8 @@ class ViewController: UIViewController {
             gadAd.rootViewController = self
             gadAd.load(GADRequest())
         }
+        
+        print("gittest")
     }
 
     @IBAction func buttonClicked(_ sender: UIBarButtonItem) {
