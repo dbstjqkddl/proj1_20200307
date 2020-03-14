@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  proj1_20200307
+
+  Created by 변윤섭 on 2020/03/07.
+  Copyright © 2020 변윤섭. All rights reserved.
+*/
+
+//네비게이션 타이틀 영역
+"nav_title_main" = "마이 홈";
+"nav_tilte_search" = "검색";

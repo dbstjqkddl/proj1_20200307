@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        
+        // Initialize the Google Mobile Ads SDK.
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["33f99c57ef71647fafbae68d4d6a0d2a"]
+        if UserDefaults.standard.object(forKey: ud.first) as? Bool == nil {
+            UserDefaults.standard.set(false, forKey: ud.ad)
+            UserDefaults.standard.set(true, forKey: ud.first)
+        }
         return true
     }
 
